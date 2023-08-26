@@ -1,11 +1,6 @@
 import styled from "@emotion/styled";
-import { SizeMap, Sizes, SIZES, User } from "@kudos/kudos-types";
-
-const Text = styled.p<{ size?: Sizes; color?: string }>`
-  color: ${({ color = "#000" }) => color};
-  font-size: ${({ size = SIZES.M }) => SizeMap[size]};
-  font-weight: normal;
-`;
+import { SIZES, User } from "@kudos/kudos-types";
+import { Text } from "@kudos/kudos-styled";
 
 const UserContainer = styled.div`
   display: grid;
