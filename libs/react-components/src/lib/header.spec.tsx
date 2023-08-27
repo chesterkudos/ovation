@@ -1,10 +1,18 @@
-// import { render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
-// import ReactComponents from "./header";
+import Header from "./header";
 
-// describe("ReactComponents", () => {
-//   it("should render successfully", () => {
-//     const { baseElement } = render(<ReactComponents />);
-//     expect(baseElement).toBeTruthy();
-//   });
-// });
+describe("Header", () => {
+  it("should render successfully", () => {
+    const { baseElement } = render(
+      <Header>
+        <ul>
+          <li>Apple</li>
+          <li>Orange</li>
+          <li>Pear</li>
+        </ul>
+      </Header>
+    );
+    expect(baseElement).toBeTruthy();
+  });
+});

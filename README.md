@@ -1,4 +1,3 @@
-
 # Kudos Monorepo
 
 This project was created by running the following command:
@@ -23,7 +22,7 @@ nx generate @nx/js:library
 npx nx generate @nx/js:library
 ```
 
-----
+---
 
 ## Intro
 
@@ -72,7 +71,7 @@ On the other side, if you make a change to _react-library_ all 3 apps (A,B and C
 npm i
 
 # this will serve all servable applications
-npm run serve 
+npm run serve
 ```
 
 NX Supports the following commands out of the box:
