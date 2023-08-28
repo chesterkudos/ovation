@@ -22,6 +22,10 @@ nx generate @nx/js:library
 npx nx generate @nx/js:library
 ```
 
+## Convenient VS Code Plugin
+
+[NX Console Plugin](https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console)
+
 ---
 
 ## Intro
@@ -89,20 +93,42 @@ nx run-many -t lint
 nx run-many -t test
 ```
 
+## Useful NX Commands
+
+If the build seems broken or cache is out of sync, you can run this to clear all NX caches:
+
+```sh
+nx reset
+```
+
 To view the entire dependency tree/graph you run this command:
 
 ```sh
 nx graph
 ```
 
+----
+
 ## Generators
+
+You can use generators to generate a new app or library. You need to install the generator as a dev-dependency (`-D`) then you can run it throug nx cli.
+
+Although, I would recommend after installing the generator to use the NX Console plugin for a GUI to walk through the steps.
 
 ### Create a new React Application
 
 ```sh
 npm i @nx/react -D
 
-nx g @nx/react:app new-app
+nx g @nx/react:app
+```
+
+### Create a new Next Application
+
+```sh
+npm i @nx/next -D
+
+nx g @nx/next:application
 ```
 
 ### Create a new JS/TS library
@@ -110,26 +136,10 @@ nx g @nx/react:app new-app
 ```sh
 npm i @nx/js -D
 
-nx g @nx/js:lib js-lib
-
-npx nx generate @nx/js:library --name=kudos-types --unitTestRunner=none --bundler=vite --compiler=swc --no-interactive
+nx g @nx/js:lib
 ```
 
-### Create a new React Application
-
-```sh
-npm i -D @nx/react
-
-nx g @nx/react:app my-new-app
-```
-
-### Create a new React Application
-
-```sh
-npm i -D @nx/react
-
-nx g @nx/react:app my-new-app
-```
+----
 
 ## Move and Remove
 
