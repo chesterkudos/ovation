@@ -1,6 +1,6 @@
 {
   "name": "@kudos/source",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -13,7 +13,7 @@
     "pre-push": "echo not setup yet",
     "serve": "nx run-many -t serve",
     "prepare": "husky install",
-    "serve:kudos-react-app": "nx run web-app:serve",
+    "serve:kudos-react-app": "nx run kudos-react-app:serve",
     "serve:kudos-next-app": "nx run kudos-next-app:serve",
     "system-check": "run-s prettier lint test build",
     "test": "nx run-many -t test"
@@ -26,6 +26,7 @@
     "next": "13.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-router-dom": "6.15.0",
     "tslib": "2.3.0"
   },
   "devDependencies": {
@@ -64,7 +65,7 @@
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
-    "husky": "^8.0.0",
+    "husky": "8.0.0",
     "jest": "29.4.1",
     "jest-environment-jsdom": "29.4.1",
     "jsdom": "22.1.0",

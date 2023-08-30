@@ -1,4 +1,5 @@
 const sharedRules = {
+  "@typescript-eslint/no-inferrable-types": "off",
   "no-mixed-spaces-and-tabs": "error",
   "no-nested-ternary": "error",
   "no-unneeded-ternary": "error",

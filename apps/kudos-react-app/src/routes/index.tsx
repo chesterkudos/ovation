@@ -49,16 +49,16 @@ const Nav = () => (
   </NavContainer>
 );
 
-export const App = () => (
+export const Index = () => (
   <MainAppContainer>
     <Header spacing="2rem">
       <Nav />
     </Header>
     <Main>
-      <H1>React App</H1>
+      <H1>Kudos React App</H1>
       <UserCard name="Chester Rivas" access="admin" />
     </Main>
   </MainAppContainer>
 );
 
-export default App;
+export default Index;

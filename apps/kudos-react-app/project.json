@@ -1,7 +1,7 @@
 {
-  "name": "web-app",
+  "name": "kudos-react-app",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/web-app/src",
+  "sourceRoot": "apps/kudos-react-app/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/web-app"
+        "outputPath": "dist/apps/kudos-react-app"
       },
       "configurations": {
         "development": {
@@ -24,16 +24,16 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "web-app:build",
+        "buildTarget": "kudos-react-app:build",
         "port": 4200
       },
       "configurations": {
         "development": {
-          "buildTarget": "web-app:build:development",
+          "buildTarget": "kudos-react-app:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "web-app:build:production",
+          "buildTarget": "kudos-react-app:build:production",
           "hmr": false
         }
       }
@@ -42,14 +42,14 @@
       "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "web-app:build"
+        "buildTarget": "kudos-react-app:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "web-app:build:development"
+          "buildTarget": "kudos-react-app:build:development"
         },
         "production": {
-          "buildTarget": "web-app:build:production"
+          "buildTarget": "kudos-react-app:build:production"
         }
       }
     },
@@ -58,14 +58,14 @@
       "outputs": ["{options.reportsDirectory}"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/apps/web-app"
+        "reportsDirectory": "../../coverage/apps/kudos-react-app"
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/web-app/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/kudos-react-app/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
