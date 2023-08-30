@@ -107,7 +107,7 @@ To view the entire dependency tree/graph you run this command:
 nx graph
 ```
 
-----
+---
 
 ## Generators
 
@@ -139,7 +139,7 @@ npm i @nx/js -D
 nx g @nx/js:lib
 ```
 
-----
+---
 
 ## Move and Remove
 
