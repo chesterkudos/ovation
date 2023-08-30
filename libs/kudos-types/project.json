@@ -15,10 +15,7 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "libs/kudos-types/**/*.ts",
-          "libs/kudos-types/package.json"
-        ]
+        "lintFilePatterns": ["libs/kudos-types/**/*.ts"]
       }
     }
   },
