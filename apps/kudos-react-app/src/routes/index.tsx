@@ -49,7 +49,7 @@ const Nav = () => (
   </NavContainer>
 );
 
-export const App = () => (
+export const Index = () => (
   <MainAppContainer>
     <Header spacing="2rem">
       <Nav />
@@ -61,4 +61,4 @@ export const App = () => (
   </MainAppContainer>
 );
 
-export default App;
+export default Index;
