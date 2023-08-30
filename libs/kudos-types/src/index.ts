@@ -4,6 +4,7 @@ export * from "./lib/FlexDirection";
 export * from "./lib/Measurements";
 export * from "./lib/ObjectFit";
 export * from "./lib/Overflow";
+export * from "./lib/Routes";
 export * from "./lib/Sizes";
 export * from "./lib/TextAlignment";
 export * from "./lib/Unit";
