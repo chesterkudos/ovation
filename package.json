@@ -1,14 +1,16 @@
 {
   "name": "@kudos/source",
   "version": "0.0.1",
+  "private": true,
   "license": "MIT",
   "scripts": {
     "build": "nx run-many -t build",
     "lint": "nx run-many -t lint",
-    "test": "nx run-many -t test",
-    "serve": "nx run-many -t serve"
+    "prettier": "npx prettier . --write .",
+    "prettier:check": "npx prettier . --check",
+    "serve": "nx run-many -t serve",
+    "test": "nx run-many -t test"
   },
-  "private": true,
   "dependencies": {
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
