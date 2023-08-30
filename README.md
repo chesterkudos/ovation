@@ -1,4 +1,4 @@
-\*\*\*\*# Kudos Monorepo
+# Kudos Monorepo
 
 This project was created by running the following command:
 
