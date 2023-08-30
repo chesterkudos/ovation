@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-
+import { H1 } from "@kudos/kudos-styled";
 import { Header, UserCard } from "@kudos/react-components";
 
 const MainAppContainer = styled.div`
@@ -55,6 +55,7 @@ export const App = () => (
       <Nav />
     </Header>
     <Main>
+      <H1>React App</H1>
       <UserCard name="Chester Rivas" access="admin" />
     </Main>
   </MainAppContainer>
