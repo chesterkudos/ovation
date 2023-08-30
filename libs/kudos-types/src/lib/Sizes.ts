@@ -1,8 +1,3 @@
-export type User = {
-  name: string;
-  access: "guest" | "base" | "admin" | "superuser";
-};
-
 export enum SIZES {
   XS = "XS",
   S = "S",
