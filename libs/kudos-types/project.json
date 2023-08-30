@@ -1,0 +1,26 @@
+{
+  "name": "kudos-types",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/kudos-types/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/kudos-types"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/kudos-types/**/*.ts",
+          "libs/kudos-types/package.json"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
