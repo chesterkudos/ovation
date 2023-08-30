@@ -10,10 +10,24 @@ export const Text = styled.p<TextProps>`
 
 export const H1 = styled.h1<TextProps>`
   color: ${({ color = "#000" }) => color};
-  font-size: ${({ size = SIZES.M }) => SizeMap[size]};
+  font-size: 2rem;
+  font-weight: bold;
 `;
 
 export const H2 = styled.h2<TextProps>`
   color: ${({ color = "#000" }) => color};
-  font-size: ${({ size = SIZES.M }) => SizeMap[size]};
+  font-size: 1.8rem;
+  font-weight: bold;
+`;
+
+export const H3 = styled.h3<TextProps>`
+  color: ${({ color = "#000" }) => color};
+  font-size: 1.6rem;
+  font-weight: bold;
+`;
+
+export const H4 = styled.h4<TextProps>`
+  color: ${({ color = "#000" }) => color};
+  font-size: 1.4rem;
+  font-weight: bold;
 `;
