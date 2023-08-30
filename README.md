@@ -40,8 +40,8 @@ For example if you want to build all the apps and libraries, you would would the
 nx run-many -t build # will default to prod
 nx run-many -t build:development # will build all apps in dev mode
 nx run-many -t build:production # will build all apps in prod mode
-nx run web-app:build:development # will build web-app only in dev mode
-nx run web-app:build:production # will build web-app only in prod mode
+nx run kudos-react-app:build:development # will build kudos-react-app only in dev mode
+nx run kudos-react-app:build:production # will build kudos-react-app only in prod mode
 ```
 
 This command is currently wrapped in npm so you can also run:
