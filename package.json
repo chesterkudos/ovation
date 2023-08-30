@@ -12,9 +12,11 @@
     "pre-commit": "run-s system-check",
     "pre-push": "echo not setup yet",
     "serve": "nx run-many -t serve",
-    "system-check": "run-s prettier:quick lint test build",
-    "test": "nx run-many -t test",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "serve:kudos-react-app": "nx run web-app:serve",
+    "serve:kudos-next-app": "nx run kudos-next-app:serve",
+    "system-check": "run-s prettier lint test build",
+    "test": "nx run-many -t test"
   },
   "dependencies": {
     "@emotion/react": "11.11.1",
