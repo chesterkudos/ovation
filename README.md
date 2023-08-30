@@ -13,7 +13,7 @@ You should probably install nx globally
 npm i nx -g
 ```
 
-Although you can still run any command through npx without installing nx globally. For example an nx command could look like this:
+Although you can still run any command through npx without installing nx globally. It is recommended you install NX globally. Here are the options for running an nx command:
 
 ```sh
 # if installed nx globally
@@ -27,14 +27,18 @@ npx nx generate @nx/js:library
 
 ## Intro
 
-This monorepo runs through NX. NX allows you to run common commands in multiple apps and libraries. Similar to create-react-app, you can create a react project. NX takes it a step further by allow you to generate more than just a react project. See here for more generators.
+This monorepo runs through NX. NX allows you to run common commands in multiple apps and libraries. Similar to create-react-app, you can create a react project. NX takes it a step further by allowing you to generate more than just a react project. See [here](https://nx.dev/packages/nest/generators/application) for more generators.
 
-Also more than just being a generator NX works similar to Lerna were it allows you to run the same command in every project which defines that command.
+NX is more more than just a generator. It works works similar to Lerna were it allows you to run the same command in every project which defines it (build, test, lint, etc...). It also allows you have more granular control of these commands. For example a production build vs a development build.
 
 For example if you want to build all the apps and libraries, you would would the command:
 
 ```sh
-nx run-many -t build
+nx run-many -t build # will default to prod
+nx run-many -t build:development # will build all apps in dev mode
+nx run-many -t build:production # will build all apps in prod mode
+nx run web-app:build:development # will build web-app only in dev mode
+nx run web-app:build:production # will build web-app only in prod mode
 ```
 
 This command is currently wrapped in npm so you can also run:
@@ -47,9 +51,9 @@ NX also manages the dependency graph and **local caching**. If you have the foll
 
 ```
 -- Apps
-  |-- AppA
-  |-- AppB
-  |-- AppC
+  |-- App A
+  |-- App B
+  |-- App C
 -- Libs
   |-- react-library
 ```
@@ -134,8 +138,6 @@ nx g @nx/react:app my-new-app
 
 ```sh
 nx g @nx/workspace:move --project my-feature-lib --destination shared/my-feature-lib
-
-nx g mv project-name
 ```
 
 ### Remove
