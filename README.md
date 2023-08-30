@@ -1,5 +1,33 @@
 # Kudos Monorepo
 
+## Getting Started
+
+```sh
+npm i
+
+# this will serve all servable applications
+npm run serve
+```
+
+NX Supports the following commands out of the box:
+
+- `serve`
+- `build`
+- `lint`
+- `test`
+
+Meaning you can run these directly in your terminal through nx
+
+```sh
+nx run-many -t serve
+nx run-many -t lint
+nx run-many -t test
+```
+
+---
+
+## Quick Overview
+
 This project was created by running the following command:
 
 ```sh
@@ -28,7 +56,7 @@ npx nx generate @nx/js:library
 
 ---
 
-## Intro
+## Summary
 
 This monorepo runs through NX. NX allows you to run common commands in multiple apps and libraries. Similar to create-react-app, you can create a react project. NX takes it a step further by allowing you to generate more than just a react project. See [here](https://nx.dev/packages/nest/generators/application) for more generators.
 
@@ -69,30 +97,6 @@ On the other side, if you make a change to _react-library_ all 3 apps (A,B and C
 
 ---
 
-## Getting Started
-
-```sh
-npm i
-
-# this will serve all servable applications
-npm run serve
-```
-
-NX Supports the following commands out of the box:
-
-- `serve`
-- `build`
-- `lint`
-- `test`
-
-Meaning you can run these directly in your terminal through nx
-
-```sh
-nx run-many -t serve
-nx run-many -t lint
-nx run-many -t test
-```
-
 ## Useful NX Commands
 
 If the build seems broken or cache is out of sync, you can run this to clear all NX caches:
@@ -106,6 +110,8 @@ To view the entire dependency tree/graph you run this command:
 ```sh
 nx graph
 ```
+
+![CleanShot 2023-08-30 at 14 45 38@2x](https://github.com/chesterkudos/ovation/assets/142827766/23072f39-170e-42e9-8c3b-0ccc05ba8fe5)
 
 ---
 
@@ -146,7 +152,7 @@ nx g @nx/js:lib
 ### Move
 
 ```sh
-nx g @nx/workspace:move --project my-feature-lib --destination shared/my-feature-lib
+nx g mv --project komponents --destination komponents-no-new
 ```
 
 ### Remove

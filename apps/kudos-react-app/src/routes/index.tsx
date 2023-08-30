@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { H1 } from "@kudos/kudos-styled";
-import { Header, UserCard } from "@kudos/react-components";
+import { Header, UserCard } from "@kudos/komponents";
 
 const MainAppContainer = styled.div`
   display: grid;
