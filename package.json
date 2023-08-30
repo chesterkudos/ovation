@@ -1,6 +1,6 @@
 {
   "name": "@kudos/source",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -13,7 +13,7 @@
     "pre-push": "echo not setup yet",
     "serve": "nx run-many -t serve",
     "prepare": "husky install",
-    "serve:kudos-react-app": "nx run web-app:serve",
+    "serve:kudos-react-app": "nx run kudos-react-app:serve",
     "serve:kudos-next-app": "nx run kudos-next-app:serve",
     "system-check": "run-s prettier lint test build",
     "test": "nx run-many -t test"
