@@ -1,7 +1,7 @@
 {
-  "name": "react-components",
+  "name": "komponents",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/react-components/src",
+  "sourceRoot": "libs/komponents/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -9,7 +9,7 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/react-components/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/komponents/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "build": {
@@ -17,7 +17,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/libs/react-components"
+        "outputPath": "dist/libs/komponents"
       },
       "configurations": {
         "development": {
@@ -32,7 +32,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/react-components/jest.config.ts",
+        "jestConfig": "libs/komponents/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {

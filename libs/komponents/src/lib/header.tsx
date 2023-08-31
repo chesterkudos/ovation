@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
+import { ReactNode } from "react";
 
 export type HeaderProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   spacing?: string;
 };
 

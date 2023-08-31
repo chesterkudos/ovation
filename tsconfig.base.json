@@ -15,9 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@kudos/komponents": ["libs/komponents/src/index.ts"],
       "@kudos/kudos-styled": ["libs/kudos-styled/src/index.ts"],
-      "@kudos/kudos-types": ["libs/kudos-types/src/index.ts"],
-      "@kudos/react-components": ["libs/react-components/src/index.ts"]
+      "@kudos/kudos-types": ["libs/kudos-types/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
