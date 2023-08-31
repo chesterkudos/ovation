@@ -54,6 +54,8 @@ npx nx generate @nx/js:library
 
 [NX Console Plugin](https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console)
 
+[Original NX README](./README-NX.md)
+
 ---
 
 ## Summary
