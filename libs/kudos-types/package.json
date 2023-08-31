@@ -1,8 +1,11 @@
 {
   "name": "@kudos/kudos-types",
   "version": "0.0.1",
-  "dependencies": {},
   "main": "./index.js",
   "module": "./index.mjs",
-  "typings": "./index.d.ts"
+  "typings": "./index.d.ts",
+  "scripts": {
+    "typescript": "npx tsc -p ."
+  },
+  "dependencies": {}
 }

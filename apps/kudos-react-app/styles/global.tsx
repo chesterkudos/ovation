@@ -9,11 +9,13 @@ export const globalStyles = css`
     line-height: 1.5;
     tab-size: 4;
     scroll-behavior: smooth;
+    color-scheme: dark light;
   }
 
   body {
     font-family: inherit;
     line-height: inherit;
+    min-height: 100vh;
   }
 
   * {

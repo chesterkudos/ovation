@@ -1,5 +1,9 @@
 import { KudosRoute } from "@kudos/kudos-types";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  RouteObject,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
 import Dashboard from "../routes/dashboard";
 import ErrorPage from "../routes/error";
 import Home from "../routes/home";
@@ -44,15 +48,17 @@ export const kudosRoutes: KudosRoute[] = [
   },
 ];
 
-const router = createBrowserRouter(
-  kudosRoutes.map((route: KudosRoute) => {
+export const pureRoutes: RouteObject[] = kudosRoutes.map(
+  (route: KudosRoute): object => {
     // plucking name out of the array of objects then passing that onto `createBrowserRouter`
     const { name, ...pureRoute } = route;
 
     return {
       ...pureRoute,
     };
-  })
+  }
 );
+
+const router = createBrowserRouter(pureRoutes);
 
 export const RouteRenderer = () => <RouterProvider router={router} />;

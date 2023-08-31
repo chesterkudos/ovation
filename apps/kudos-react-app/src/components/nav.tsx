@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { KudosRoute } from "@kudos/kudos-types";
+import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { kudosRoutes } from "../route-helpers/route-renderer";
 
@@ -63,15 +64,15 @@ export const Nav = () => (
  * @prop children
  * @returns JSX
  */
-const renderRoute = ({ path, name, children }: KudosRoute) => (
-  <>
-    <NavListItem key={path}>
-      <NavLink to={path}>{name}</NavLink>
-    </NavListItem>
+const renderRoute = ({ path, name, children }: KudosRoute): ReactNode => (
+  <NavContainer>
+    {!!path && (
+      <NavListItem key={name}>
+        <NavLink to={path}>{name}</NavLink>
+      </NavListItem>
+    )}
     {...!!children ? children.map(renderRoute) : []}
-  </>
+  </NavContainer>
 );
 
-export const DynamicNav = () => (
-  <NavContainer>{kudosRoutes.map(renderRoute)}</NavContainer>
-);
+export const DynamicNav = () => kudosRoutes.map(renderRoute);
