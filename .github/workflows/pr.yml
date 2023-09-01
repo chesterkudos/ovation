@@ -4,6 +4,10 @@ on:
   pull_request:
     branches: [main]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   pr-check:
     runs-on: ubuntu-latest
@@ -19,6 +23,7 @@ jobs:
         uses: auguwu/node-pm-cache@master
         with:
           node-modules: ./node_modules
+          package-manager: npm
 
       - name: NPM Install
         if: steps.npm-cache.outputs.cache-hit != 'true' || steps.npm-cache.outputs.node-modules-cache-hit != 'true'
