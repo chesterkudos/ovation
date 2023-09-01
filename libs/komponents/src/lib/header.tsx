@@ -10,8 +10,10 @@ const HeaderContainer = styled.div<{ spacing?: string }>`
   display: grid;
   gap: ${({ spacing }) => spacing};
   grid-template-columns: 1fr;
-  background-color: #ea8810;
   padding: 1rem;
+  width: 1000%;
+  background-color: #0f588b;
+  color: #ffffff;
 `;
 
 export const Header = ({ children, spacing = "1rem" }: HeaderProps) => (

@@ -1,11 +1,10 @@
 import styled from "@emotion/styled";
-import { SIZES, User } from "@kudos/kudos-types";
 import { Text } from "@kudos/kudos-styled";
+import { SIZES, User } from "@kudos/kudos-types";
 
 const UserContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  background-color: #63119e;
   padding: 1rem;
 `;
 

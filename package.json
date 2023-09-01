@@ -8,6 +8,7 @@
     "branches:stale:dr": "DRY_RUN=true bash bin/clean-stale.sh",
     "branches:stale": "DRY_RUN=false bash bin/clean-stale.sh",
     "lint": "nx run-many -t lint",
+    "diff-exit-code": "git diff --exit-code",
     "prettier": "npx prettier . --write .",
     "prettier:check": "npx prettier . --check",
     "prettier:quick": "pretty-quick --staged",
@@ -29,6 +30,7 @@
     "next": "13.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-query": "3.39.3",
     "react-router-dom": "6.15.0",
     "tslib": "2.3.0"
   },

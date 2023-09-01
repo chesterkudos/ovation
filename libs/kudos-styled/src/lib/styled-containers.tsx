@@ -18,7 +18,6 @@ export const CenteredContainer = styled.div`
   grid-template-columns: 1fr;
   padding: 1rem;
   gap: 1rem;
-  background-color: #18dbf5;
   margin: 0 auto;
   max-width: 1480px;
 `;

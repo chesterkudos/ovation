@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 export const PrimaryButton = styled.button`
   appearance: none;
   background-color: #0370d0;
-  color: white;
+  color: #0e0e0e;
   padding: 1rem;
   border-radius: 1rem;
   cursor: pointer;
