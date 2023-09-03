@@ -18,7 +18,8 @@
     "serve:kudos-react-app": "nx run kudos-react-app:serve",
     "serve:kudos-next-app": "nx run kudos-next-app:serve",
     "system-check": "run-s prettier:quick lint test build",
-    "test": "nx run-many -t test"
+    "test": "nx run-many -t test",
+    "typescript": "nx run-many -t typescript"
   },
   "dependencies": {
     "@emotion/react": "11.11.1",
