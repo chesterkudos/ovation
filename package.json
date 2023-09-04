@@ -8,6 +8,7 @@
     "branches:stale:dr": "DRY_RUN=true bash bin/clean-stale.sh",
     "branches:stale": "DRY_RUN=false bash bin/clean-stale.sh",
     "lint": "nx run-many -t lint",
+    "file-count": "nx run-many -t file-count --verbose",
     "prettier": "npx prettier . --write .",
     "prettier:check": "npx prettier . --check",
     "prettier:quick": "pretty-quick --staged",

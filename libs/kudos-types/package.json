@@ -5,6 +5,7 @@
   "module": "./index.mjs",
   "typings": "./index.d.ts",
   "scripts": {
+    "file-count": "find . -type f | wc -l",
     "typescript": "npx tsc -p ."
   },
   "dependencies": {}

@@ -10,6 +10,7 @@
   "main": "./index.js",
   "types": "./index.d.ts",
   "scripts": {
+    "file-count": "find . -type f | wc -l",
     "typescript": "npx tsc -p ."
   }
 }
