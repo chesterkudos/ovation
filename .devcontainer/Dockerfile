@@ -52,13 +52,15 @@ COPY --from=node /usr/local/bin /usr/local/bin
 
 RUN node -v
 
+RUN sudo ln -sf bash /bin/sh --force --unsafe-perm
+
 # RUN npm i --global --unsafe-perm nx
 # RUN npm --global config set user root && \
 #   npm --global install nx
 # RUN npm i -g nx --force
 # RUN nx -v
 
-RUN npm i -g pnpm nx --force
+RUN npm i -g pnpm nx --force --unsafe-perm
 # RUN firebase --help
 
 # RUN npm i -g pnpm
