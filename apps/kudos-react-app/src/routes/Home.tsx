@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Header } from "@kudos/komponents";
+import { Header } from "@kudos/react-components";
 import { H1 } from "@kudos/kudos-styled";
 import { Location, Outlet, useLocation } from "react-router-dom";
 import { DynamicNav } from "../components/Nav";

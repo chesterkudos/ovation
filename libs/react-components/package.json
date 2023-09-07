@@ -1,5 +1,5 @@
 {
-  "name": "@kudos/komponents",
+  "name": "@kudos/react-components",
   "version": "0.0.1",
   "exports": {
     ".": {
