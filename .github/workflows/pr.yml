@@ -21,42 +21,40 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Cache node modules
-        id: cache-npm
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
+      - name: Install PNPM
+        uses: pnpm/action-setup@v2
         with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          version: 8.7.1
+          run_install: false
+
+      - name: Get PNPM Store Directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup PNPM Cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+            ${{ runner.os }}-pnpm-store-
 
-      - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
-        name: List the state of node modules
-        continue-on-error: true
-        run: npm list
-
-      - name: NPM Install
-        run: npm install
-
-      - name: Diff Check
-        run: npm run diff-exit-code
+      - name: PNPM Install Dependencies
+        # if: steps.pnpm-cache.outputs.cache-hit != 'true' || steps.pnpm-cache.outputs.node-modules-cache-hit != 'true'
+        run: pnpm install
 
       - name: Prettier Check
-        run: npm run prettier:check
+        run: pnpm prettier:check
 
       - name: Typescript Check
-        run: npm run typescript
+        run: pnpm typescript
 
       - name: ESlint
-        run: npm run lint
+        run: pnpm lint
 
       - name: Test
-        run: npm run test
+        run: pnpm test
 
       - name: Build
-        run: npm run build
+        run: pnpm build
