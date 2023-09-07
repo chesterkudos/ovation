@@ -154,7 +154,7 @@ nx g @nx/js:lib
 ### Move
 
 ```sh
-nx g mv --project komponents --destination komponents-no-new
+nx g mv --project komponents --destination komponents-new-name
 ```
 
 ### Remove
