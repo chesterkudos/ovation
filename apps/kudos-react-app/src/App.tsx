@@ -1,6 +1,6 @@
 import { Global } from "@emotion/react";
 import { globalStyles } from "../styles/global";
-import { RouteRenderer } from "./route-helpers/route-renderer";
+import { RouteRenderer } from "./route-helpers/RouteRenderer";
 
 export const App = () => (
   <>

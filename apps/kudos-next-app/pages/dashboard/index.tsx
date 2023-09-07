@@ -8,7 +8,6 @@ const DashboardContainer = styled.div`
   grid-template-columns: 1fr;
   padding: 1rem;
   gap: 1rem;
-  background-color: #e2e2e2;
   width: 100%;
 `;
 

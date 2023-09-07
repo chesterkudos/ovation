@@ -4,12 +4,12 @@ import {
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
-import Dashboard from "../routes/dashboard";
-import ErrorPage from "../routes/error";
-import Home from "../routes/home";
-import Login from "../routes/login";
-import Me from "../routes/me";
-import { ProtectedRoute } from "./protected-route";
+import Dashboard from "../routes/Dashboard";
+import ErrorPage from "../routes/Error";
+import Home from "../routes/Home";
+import Login from "../routes/Login";
+import Me from "../routes/Me";
+import { ProtectedRoute } from "./ProtectedRoute";
 
 export const kudosRoutes: KudosRoute[] = [
   {

@@ -7,7 +7,6 @@ const HomeContainer = styled.div`
   grid-template-columns: 1fr;
   padding: 1rem;
   gap: 1rem;
-  background-color: #89dada;
   width: 100%;
 `;
 
