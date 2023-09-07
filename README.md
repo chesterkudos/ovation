@@ -3,11 +3,36 @@
 ## Getting Started
 
 ```sh
-npm i
-
-# this will serve all servable applications
-npm run serve
+npm i -g pnpm # pnpm version 8.7.1
+npm i -g nx # nx cli to call commands within the monrepo
+pnpm i
 ```
+
+### Make Sure Everything Works
+
+_all commands go through **pnpm**, pnpm is another package manager like npm and yarn_
+
+> See more about pnpm: https://pnpm.io/
+
+This command will run through all the commands to make sure everything works as intended.
+
+```sh
+pnpm system-check
+```
+
+### Serving Apps
+
+```sh
+# this will serve all servable applications
+pnpm serve
+
+# this will serve only the app named kudos-react-app
+pnpm serve:react-app
+```
+
+---
+
+## Some NX Basics
 
 NX Supports the following commands out of the box:
 
@@ -19,9 +44,9 @@ NX Supports the following commands out of the box:
 Meaning you can run these directly in your terminal through nx
 
 ```sh
-nx run-many -t serve
-nx run-many -t lint
-nx run-many -t test
+nx run-many -t test # this will run the "test" command in all projects which define the command "test"
+nx run kudos-react-app:lint --verbose # this will run the "lint" command in the kudos-react-app project
+nx affected:build # this will run the "build" on all affected projects since the last commit
 ```
 
 ---
@@ -32,12 +57,6 @@ This project was created by running the following command:
 
 ```sh
 npx create-nx-workspace@latest
-```
-
-You should probably install nx globally
-
-```sh
-npm i nx -g
 ```
 
 Although you can still run any command through npx without installing nx globally. It is recommended you install NX globally. Here are the options for running an nx command:
