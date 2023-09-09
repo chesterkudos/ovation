@@ -1,12 +1,12 @@
 {
-  "name": "@kudos/kudos-types",
+  "name": "@kudos/kudos-utils",
   "version": "0.0.1",
+  "dependencies": {},
   "main": "./index.js",
   "module": "./index.mjs",
   "typings": "./index.d.ts",
   "scripts": {
     "prettier": "prettier --w . --config ../../.prettierrc",
-    "prettier:check": "prettier --check . --config ../../.prettierrc",
     "typescript": "tsc -p ."
   }
 }

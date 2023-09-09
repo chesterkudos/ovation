@@ -21,40 +21,35 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install PNPM
-        uses: pnpm/action-setup@v2
+      - uses: oven-sh/setup-bun@v1
         with:
-          version: 8.7.1
-          run_install: false
+          bun-version: latest
 
-      - name: Get PNPM Store Directory
-        shell: bash
+      - name: Check Versions
         run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+          node -v
+          bun -v
 
-      - name: Setup PNPM Cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+      - name: Bun Install
+        run: bun install
 
-      - name: PNPM Install Dependencies
-        # if: steps.pnpm-cache.outputs.cache-hit != 'true' || steps.pnpm-cache.outputs.node-modules-cache-hit != 'true'
-        run: pnpm install
+      - name: Diff Check
+        run: bun diff-exit-code
 
       - name: Prettier Check
-        run: pnpm prettier:check
+        run: bun prettier:check
 
       - name: Typescript Check
-        run: pnpm typescript
+        run: bun typescript
 
       - name: ESlint
-        run: pnpm lint
+        run: bun lint
 
       - name: Test
-        run: pnpm test
+        run: bun test
 
       - name: Build
-        run: pnpm build
+        run: bun run build
+
+      - name: Diff Check
+        run: bun diff-exit-code

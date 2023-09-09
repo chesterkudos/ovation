@@ -17,6 +17,7 @@
     "paths": {
       "@kudos/kudos-styled": ["libs/kudos-styled/src/index.ts"],
       "@kudos/kudos-types": ["libs/kudos-types/src/index.ts"],
+      "@kudos/kudos-utils": ["libs/kudos-utils/src/index.ts"],
       "@kudos/react-components": ["libs/react-components/src/index.ts"]
     }
   },

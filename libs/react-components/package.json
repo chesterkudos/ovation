@@ -10,6 +10,8 @@
   "main": "./index.js",
   "types": "./index.d.ts",
   "scripts": {
-    "typescript": "npx tsc -p ."
+    "prettier": "prettier --w . --config ../../.prettierrc",
+    "prettier:check": "prettier --check . --config ../../.prettierrc",
+    "typescript": "tsc -p ."
   }
 }

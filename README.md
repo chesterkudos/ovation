@@ -3,31 +3,30 @@
 ## Getting Started
 
 ```sh
-npm i -g pnpm # pnpm version 8.7.1
-npm i -g nx # nx cli to call commands within the monrepo
-pnpm i
+npm i -g nx # nx cli to manage monorepo
+npm i -g bun # install bun cli to use as a package manager
 ```
 
 ### Make Sure Everything Works
 
-_all commands go through **pnpm**, pnpm is another package manager like npm and yarn_
+_all commands go through **bun**, bun is another package manager like npm and yarn_
 
-> See more about pnpm: https://pnpm.io/
+> See more about pnpm: https://bun.sh/blog/bun-v1.0
 
 This command will run through all the commands to make sure everything works as intended.
 
 ```sh
-pnpm system-check
+bun system-check
 ```
 
 ### Serving Apps
 
 ```sh
 # this will serve all servable applications
-pnpm serve
+bun serve
 
 # this will serve only the app named kudos-react-app
-pnpm serve:react-app
+bun serve:react-app
 ```
 
 ---
@@ -93,10 +92,10 @@ nx run kudos-react-app:build:development # will build kudos-react-app only in de
 nx run kudos-react-app:build:production # will build kudos-react-app only in prod mode
 ```
 
-This command is currently wrapped in npm so you can also run:
+This command is currently wrapped in bun so you can also run:
 
 ```sh
-npm run build
+bun run build
 ```
 
 NX also manages the dependency graph and **local caching**. If you have the following project setup:
@@ -145,7 +144,7 @@ Although, I would recommend after installing the generator to use the NX Console
 ### Create a new React Application
 
 ```sh
-npm i @nx/react -D
+bun i @nx/react -D
 
 nx g @nx/react:app
 ```
@@ -153,7 +152,7 @@ nx g @nx/react:app
 ### Create a new Next Application
 
 ```sh
-npm i @nx/next -D
+bun i @nx/next -D
 
 nx g @nx/next:application
 ```
@@ -161,7 +160,7 @@ nx g @nx/next:application
 ### Create a new JS/TS library
 
 ```sh
-npm i @nx/js -D
+bun i @nx/js -D
 
 nx g @nx/js:lib
 ```
